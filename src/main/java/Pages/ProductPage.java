@@ -26,15 +26,14 @@ public class ProductPage {
 
 
     public void hoverAndAddFirstProductToCompare() {
-        // Wait for the product item to be visible and clickable
+        // Wait to be visible and clickable
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement productItem = wait.until(ExpectedConditions.elementToBeClickable(firstProduct));
 
-        // Create an Actions object to simulate mouse hover
+        // Create hover
         Actions action = new Actions(driver);
         action.moveToElement(productItem).perform(); // Hover over the product
 
-        // Wait for the "Add to Compare" button to appear (since it's hidden until hover)
         WebElement addToCompareButton = wait.until(ExpectedConditions.elementToBeClickable(addToCompareButtonLocatorFirst));
 
         // Click the "Add to Compare" button

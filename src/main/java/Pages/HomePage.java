@@ -12,16 +12,16 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 public class HomePage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private JavascriptExecutor jsExecutor;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+    private final JavascriptExecutor jsExecutor;
 
     // Logger to log important actions and errors
     private static final Logger logger = Logger.getLogger(HomePage.class.getName());
 
     // Locators
-    private By hotSellersLink = By.xpath("//h2[contains(text(),'Hot Sellers')]");
-    private By homePageLink = By.xpath("//a[@class='logo']");
+    private final By hotSellersLink = By.xpath("//h2[contains(text(),'Hot Sellers')]");
+    private final By homePageLink = By.xpath("//a[@class='logo']");
 
     // Constructor to initialize WebDriver, WebDriverWait, and JavascriptExecutor
     public HomePage(WebDriver driver) {
